@@ -1,4 +1,4 @@
-import { db } from "../../../db/config";
+import { db } from "../../../../db/config";
 export async function POST(request) {
   const { email, enteredOtp } = await request.json();
 

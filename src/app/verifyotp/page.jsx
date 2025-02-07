@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import Navbar from '../../components/Navbar';
 
 export default function OtpVerification() {
   const [otp, setOtp] = useState('');
@@ -40,11 +41,13 @@ export default function OtpVerification() {
     setStatus(data.message);
 
     if (data.success) {
-      router.push('/dashboard');
+      router.push('/options');
     }
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="p-4">
       <h1>OTP Verification</h1>
       <p>An OTP has been sent to {email}</p>
@@ -60,6 +63,6 @@ export default function OtpVerification() {
         <button onClick={verifyOtp} className="ml-2 p-2 bg-green-500 text-white rounded">Verify OTP</button>
       </div>
       {status && <p className="mt-2 text-red-500">{status}</p>}
-    </div>
+    </div></>
   );
 }

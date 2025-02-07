@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Navbar from '../../components/Navbar';
 
 
 
@@ -52,6 +53,7 @@ export default function AddRecord() {
 
     return (
         <>
+        <Navbar/>
       <div className="flex items-center justify-center min-h-screen">
 
         <div className="w-[40vw] min-h-screen items-center justify-center  bg-gray-100">
@@ -134,7 +136,7 @@ export default function AddRecord() {
                 criminal record by date 
             </button>
             </a>
-            <a href="/criminalbystate">
+            <a href="/CriminalByState">
             <button
                 className="mt-6 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 mx-7"
                 
@@ -143,6 +145,10 @@ export default function AddRecord() {
             </button>
             </a>
         </div>
+
+
+
+        
         </div></>
     );
 }

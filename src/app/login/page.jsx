@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Navbar from '../../components/Navbar';
 
 export default function Login() {
   const [formData, setFormData] = useState({
@@ -35,7 +36,7 @@ export default function Login() {
 
       if (response.ok) {
         setMessage('Login successful!');
-        router.push('/dashboard'); // Navigate to dashboard after successful login
+        router.push('/options'); // Navigate to dashboard after successful login
       } else {
         setMessage(data.message || 'Invalid email or password.');
       }
@@ -45,6 +46,8 @@ export default function Login() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
       <form className="bg-white p-6 rounded shadow-md" onSubmit={handleSubmit}>
         <h2 className="text-2xl font-bold mb-4">Login</h2>
@@ -82,6 +85,6 @@ export default function Login() {
           Login
         </button>
       </form>
-    </div>
+    </div></>
   );
 }
