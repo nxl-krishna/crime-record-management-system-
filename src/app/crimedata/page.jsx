@@ -16,8 +16,8 @@ export default function AddRecord() {
         victim_name: '',
         suspect: '',
         crime_description: '',
-        assigned_officer: '',
-        id_assigned_officer: '',
+        
+        officer_id: '',
         address: ''
     });
 
@@ -49,8 +49,8 @@ export default function AddRecord() {
                     victim_name: '',
                     suspect: '',
                     crime_description: '',
-                    assigned_officer: '',
-                    id_assigned_officer: '',
+                    
+                    officer_id: '',
                     address: ''
                 });
             } else {
@@ -107,24 +107,14 @@ export default function AddRecord() {
                             />
                         </div>
 
-                        <div className="mb-4">
-                            <label className="block mb-1">Assigned Officer</label>
-                            <input
-                                type="text"
-                                name="assigned_officer"
-                                value={formData.assigned_officer}
-                                onChange={handleInputChange}
-                                className="w-full px-3 py-2 border rounded"
-                                required
-                            />
-                        </div>
+                        
 
                         <div className="mb-4">
                             <label className="block mb-1">ID of Assigned Officer</label>
                             <input
                                 type="text"
-                                name="id_assigned_officer"
-                                value={formData.id_assigned_officer}
+                                name="officer_id"
+                                value={formData.officer_id}
                                 onChange={handleInputChange}
                                 className="w-full px-3 py-2 border rounded"
                                 required

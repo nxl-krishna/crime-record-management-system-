@@ -10,7 +10,7 @@ export async function POST(request) {
   }
 
   try {
-    const [rows] = await db.query("SELECT * FROM users WHERE id = ?", [
+    const [rows] = await db.query("SELECT * FROM users WHERE officer_id = ?", [
       id,
     ]);
 

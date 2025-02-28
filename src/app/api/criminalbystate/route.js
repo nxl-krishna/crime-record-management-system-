@@ -12,7 +12,7 @@ export async function GET(request) {
 
   try {
     const [results] = await db.query(
-      "SELECT name,crime,description state FROM criminals WHERE state = ?",
+      "SELECT name,crime,description, state FROM criminals WHERE state = ?",
       [state]
     );
 

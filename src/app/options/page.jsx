@@ -70,6 +70,13 @@ export default function AddRecord() {
               </button>
 
             </a>
+            <a href="/checkofficerdata">
+           <button className="mt-6 bg-red-500 text-white px-6 py-3 text-lg rounded hover:bg-red-600 mx-7 transition w-48"
+>
+Officer data record
+              </button>
+
+            </a>
         </div>
 
 </>
